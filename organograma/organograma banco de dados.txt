@@ -1,0 +1,30 @@
+diagrama do banco de dados conversoa
+
+
+tabela cadastro de clientes
+
+codigo  chave primaria
+data_abertura
+empresa
+cnpj
+nome_contato
+fone
+fone2
+email
+n_contrato
+vencimento
+tipo_plano
+
+
+tabela login 
+codigo
+data
+email
+senha
+n_acessos
+
+tabela plano
+TipoPlano
+ValidadePlano
+valor
+

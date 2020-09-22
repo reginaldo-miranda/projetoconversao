@@ -1,0 +1,63 @@
+
+<html>
+<head>
+    <title>Teste PapaParse</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://papaparse.com/resources/js/papaparse.js"></script>
+    <style>
+        td {
+            border: 1px solid #ccc;
+            padding: 1px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            margin:auto;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#btnConverter').click(function(){
+
+                // veja mais em: http://papaparse.com/docs#jquery
+                $('input[type=file]').parse({
+                    //definindo configuração
+                    config : buildConfig()
+                });
+            });
+
+            function buildConfig()
+            {
+                // função chamada quando completar a conversão
+                return {complete: Complete};
+            }
+
+            function Complete(results)
+            {
+                // limpando conteudo da div
+                $('#tabela_aqui').html('');
+                // inserindo tabela na div
+                $('<table id="tabela"></table>').appendTo('#tabela_aqui');
+                // inserindo linhas
+                for (var i = 0; i < results.data.length; i++) {
+                    $('<tr></tr>').appendTo('#tabela');
+                }
+                // inserindo celulas nas linhas
+                $('tr').each(function(key, val) {
+                    for (var j = 0; j < results.data[0].length; j++) {
+                        $(this).append('<td>'+results.data[key][j]+'</td>');
+                    }
+                });
+
+            }
+        });
+    </script>
+</head>
+<body>
+    Arquivo (.csv) <input type="file" name="csv_file"><br>
+    <button id="btnConverter">Converter</button>
+    <br/>
+    <div id="tabela_aqui"></div>
+</body></html>

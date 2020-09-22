@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+
+body{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: arial;
+}
+
+#container {    /* div do FRLogin */
+    position: absolute; 
+   /* position: relative; */
+    top: 0;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 370px;
+    height: 150px;
+    margin: auto;
+    box-shadow: 0px 0px 10px darkcyan;
+    padding: 20px;
+    box-sizing: border-box; 
+ }
+
+
+#principal{
+   width: 100%;
+   height: 700px;
+
+}
+
+
+ .row {
+    clear: both;
+  }
+  
+  .column-3 {    
+      width: 25%;    
+  }
+  
+  .column-9 {    
+      width: 75%;    
+  }
+  
+  .label {
+      padding-top: 7px;
+      text-align: right;    
+  }
+  
+  .label:after {
+      content: ':';
+      padding-right: 5px;
+  }
+  
+  .column {
+      float: left;
+      height: 41px;    
+  }
+  
+  .input input {
+      width: 100%;
+      height: 34px;    
+      padding-left: 5px;
+      box-sizing: border-box;
+  }
+
+ 
+#texto{
+    text-align: center;
+    width: 75%;
+}
+
+header{  /* cabecalho das paginas */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: #1abc9c;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 2px;
+    height: 43px;
+    
+     
+}
+
+#btn-fecharSistema{
+    width: 100%;
+
+}
+
+
+.fa-times{   /* ref ao botao sair*/
+   
+ color: #ED3838;
+ text-shadow: 1px 1px black;
+
+
+}
+#saida{
+    
+    color: #000;
+    margin-right: 2%;
+
+}
+
+#rodap{
+
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 300;
+    bottom: 0;
+}
+
+
+#copy{
+    width: 95%;
+    background-color: #1abc9c;
+    text-align: center;
+    margin: 10px auto;
+    color: white;
+    font-size: 14px;
+
+
+}
+
